@@ -32,6 +32,7 @@ public class ClazzController {
     @CrossOrigin
     @RequestMapping("/get/class/all")
     public ResponseMessage<List<ClassVO>> listClassesAll() {
+        System.out.println("test");
         return ResponseMessageFactory.getResResponseMessage(ResultCode.SUCCESS, classService.listClassesAll());
     }
 
