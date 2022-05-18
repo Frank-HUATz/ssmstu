@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tan.dao.ClassDao">
+    <select id="listClassesAll" resultType="com.tan.pojo.ClassVO">
+        SELECT c.*, COUNT(s.sid) scount
+        FROM clazz c
+                 LEFT JOIN student s
+                           ON c.cid = s.cid
+        GROUP BY c.cid
+    </select>
+
+    <insert id="saveClass" parameterType="com.tan.pojo.ClassDO" keyProperty="cid" useGeneratedKeys="true">
+        insert into clazz (cname)
+        VALUES (#{cname})
+    </insert>
+
+    <delete id="removeClass" parameterType="int">
+        delete
+        from clazz
+        where cid = #{cid}
+    </delete>
+
+    <update id="updateClass" parameterType="com.tan.pojo.ClassDO">
+        update clazz
+        <set>
+            <if test="cname!=null and cname !=''">
+                cname = #{cname}
+            </if>
+        </set>
+        where cid = #{cid}
+    </update>
+
+    <select id="countClassByCname" resultType="int">
+        select count(*) from clazz where cname = #{cname}
+    </select>
+
+</mapper>
