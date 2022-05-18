@@ -46,7 +46,7 @@ public class ClazzController {
     @CrossOrigin
     @RequestMapping("/save/class")
     public ResponseMessage<String> saveClass(ClassDO clazz) {
-        int i = 0;
+        int i;
         try {
             i = classService.saveClass(clazz);
         } catch (ClassNameDuplicateException e) {
@@ -58,7 +58,7 @@ public class ClazzController {
     @CrossOrigin
     @RequestMapping("/update/class")
     public ResponseMessage<String> updateClass(ClassDO clazz) {
-        int i = 0;
+        int i;
         try {
             i = classService.updateClass(clazz);
         } catch (ClassNameDuplicateException e) {
