@@ -1,14 +1,6 @@
 package com.tan.util;
 
-/**
- * @author Tan
- * @version 1.0.0
- * @ClassName ResponseMessage.java
- * @Description TODO
- * @createTime 2022-05-08 10:50:00
- */
 public class ResponseMessage<T> {
-
     private int status;
     private String message;
     private T data;
@@ -16,7 +8,7 @@ public class ResponseMessage<T> {
     public ResponseMessage() {
     }
 
-    public ResponseMessage(int status,String message,T data) {
+    public ResponseMessage(int status, String message, T data) {
         this.status = status;
         this.data = data;
         this.message = message;

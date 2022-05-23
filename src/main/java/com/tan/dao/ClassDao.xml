@@ -33,7 +33,9 @@
     </update>
 
     <select id="countClassByCname" resultType="int">
-        select count(*) from clazz where cname = #{cname}
+        select count(*)
+        from clazz
+        where cname = #{cname}
     </select>
 
 </mapper>

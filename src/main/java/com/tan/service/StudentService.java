@@ -1,9 +1,6 @@
 package com.tan.service;
-
 import com.tan.pojo.StudentDO;
 import com.tan.pojo.StudentVO;
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
 
 public interface StudentService {

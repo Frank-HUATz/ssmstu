@@ -14,14 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * @author Tan
- * @version 1.0.0
- * @ClassName ClazzController.java
- * @Description TODO
- * @createTime 2022-05-11 19:37:00
- */
-
 @RestController
 @RequestMapping(value = "/api")
 public class ClazzController {

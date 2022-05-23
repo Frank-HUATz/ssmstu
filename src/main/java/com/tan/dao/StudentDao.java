@@ -8,13 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * @author Tan
- * @version 1.0.0
- * @ClassName StudentDao.java
- * @Description TODO
- * @createTime 2022-05-08 08:56:00
- */
 
 @Repository
 @Mapper
